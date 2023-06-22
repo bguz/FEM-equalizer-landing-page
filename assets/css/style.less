@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+@cyan: hsl(177, 68%, 64%);
+@orange: hsl(12, 94%, 65%);
+@light-orange: hsl(33, 100%, 70%);
+@white: hsl(20, 33%, 98%);
+@black: hsl(244, 23%, 12%);
+
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clear {
+   clear: both;
+}
+
+/* General Styles */
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: @white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.6rem;
+}
+h1 {
+    color: @black;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    letter-spacing: -0.455px;
+}
+p {
+    color: @black;
+    line-height: 2.6rem;
+}
+.wrapper {
+    max-width: 111rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+/* Header */
+.header {
+    background-image: url('../images/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-position: right -200px top -200px;
+    padding-bottom: 16rem;
+    
+    .header__logo {
+        padding: 3rem 0;
+    }
+}
+
+/* App */
+
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  
+    .header {
+        background-image: url('../images/bg-main-tablet.png'), url('../images/bg-pattern-1.svg');
+        background-repeat: no-repeat;
+        background-position: right -200px top -200px, right -60px top -100px;
+    }
+    .header__content {
+        width: 75%;
+
+        .header__heading {
+            font-size: 6.4rem;
+            line-height: 6.4rem;
+            letter-spacing: -0.727px;
+        }
+
+        .header__copy {
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+        }   
+    }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { }
