@@ -1,0 +1,219 @@
+<header class="header">
+    <div class="wrapper">
+      <img src="assets/images/logo.svg" alt="Equalizer logo" class="header__logo" />
+      <div class="header__content">
+        <h1 class="header__heading">We make your music sound extraordinary.</h1>
+        <p class="header__copy">A system audio equalizer specifically designed for Android and iOS. Freely tune the way your music sounds with a professional grade parametric EQ & volume mixer. Control bass, mids, treble, gain control, reverb, and more!</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="app">
+      <div class="wrapper">
+        <div class="test">
+          <div class="app__content">
+            <img src="assets/images/illustration-app.png" alt="Premium EQ app illustration" class="app__img" />
+            <div class="service">
+              <h2 class="service__heading">Premium EQ</h2>
+              <p class="service__copy">Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take your listening experience to a whole new level and access all our incredible features!</p>
+              <p class="service__price">$4 <span class="service__month">/ month</span></p>
+              <a href="#" class="cta cta--apple"><img src="assets/images/icon-apple.svg" alt="Apple icon" /> iOS Download</a>
+              <a href="#" class="cta cta--android"><img src="assets/images/icon-android.svg" alt="Android icon" /> Android Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__content">
+        <div class="footer__logo-info">
+          <img src="assets/images/logo.svg" alt="Equalizer logo" class="footer__logo" />
+          <p class="footer__copy">All rights reserved © Equalizer 2021<br />Have any problems? Contact us via social media or email us at <a href="#">equalizer@example.com</a>
+        </div>
+        <ul class="socials">
+          <li class="socials__item"><img src="assets/images/icon-facebook.svg" alt="Facebook icon" class="socials__icon" /></li>
+          <li class="socials__item"><img src="assets/images/icon-instagram.svg" alt="Instagram icon" class="socials__icon" /></li>
+          <li class="socials__item"><img src="assets/images/icon-twitter.svg" alt="Twitter icon" class="socials__icon" /></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+/* Header */
+.header {
+    padding: 0 2.5rem 16rem 2.5rem;
+    background-image: url('../images/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-position: right -200px top -200px;
+    
+    .header__logo {
+        padding: 3rem 0;
+    }
+}
+
+/* App */
+.app{
+    background-color: @black;
+    background-image: url('../images/bg-pattern-2.svg');
+    background-repeat: no-repeat;
+    background-position: top 40px center;
+    height: 60rem;
+    position: relative;
+    margin-bottom: 28rem;
+
+    .app__content {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .app__img {
+            width: 20rem;
+            margin-top: -12rem;
+        }
+
+        .service {
+            background-color: @orange;
+            border-radius: 1.2rem;
+            margin-top: 4rem;
+            padding: 2rem;
+
+            .service__heading,
+            .service__copy,
+            .service__price {
+                color: @white;
+            }
+
+            .service__price {
+                display: flex;
+                align-items: center;
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+                font-size: 6.5rem;
+                font-weight: 700;
+                gap: 1.5rem;
+            }
+
+            .service__month {
+                font-size: 2rem;
+                font-weight: 400;
+                letter-spacing: -0.2px;
+            }
+        }
+    }
+}
+
+footer {
+    margin-bottom: 6rem;
+
+    .footer__copy a {
+        color: @black;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: flex-start;
+        list-style-type: none;
+        margin-top: 4rem;
+        gap: 2rem;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  
+    .header {
+        background-image: url('../images/bg-pattern-1.svg'), url('../images/bg-main-tablet.png');
+        background-repeat: no-repeat;
+        background-position: right -60px top -100px, right -200px top -200px;
+    }
+    .header__content {
+        width: 75%;
+
+        .header__heading {
+            font-size: 6.4rem;
+            line-height: 6.4rem;
+            letter-spacing: -0.727px;
+        }
+
+        .header__copy {
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+        }   
+    }
+
+    // .app {
+    //     margin-bottom: 8rem;
+
+    //     .app__content {
+    //         flex-direction: row;
+    
+    //         .app__img {
+    //             margin-top: -25rem;
+    //             width: 23rem;
+    //         }
+    //         .service {
+    //             margin-left: -8rem;
+    //             width: 40rem;
+    //         }
+    //     }
+    // }
+
+    .footer__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer__logo-info {
+            width: 60rem;
+        }
+
+        .socials {
+            margin-top: 0;
+        }
+    }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 1110px) {
+    .header {
+        background-image: url('../images/bg-pattern-1.svg'), url('../images/bg-main-desktop.png');
+        background-repeat: no-repeat;
+        background-position: right -60px top -100px, right -100px top -200px;
+    }
+
+    // .app {
+    //     .app__content {
+    //         .app__img {
+    //             width: 28rem;
+    //         }
+    //         .service {
+    //             margin-left: 16rem;
+    //         }
+    //     }
+    // }
+
+    .footer__content {
+        .footer__logo-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6rem;
+        }
+    }
+
+}
